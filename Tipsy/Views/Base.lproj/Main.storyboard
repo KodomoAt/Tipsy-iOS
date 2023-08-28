@@ -150,6 +150,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FIb-Qz-V6t"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hhq-2F-eDr"/>
@@ -172,6 +175,7 @@
                         <outlet property="tenPcButton" destination="Rwu-A9-VfH" id="Z62-X1-fDc"/>
                         <outlet property="twentyPcButton" destination="CKa-YD-tVk" id="Slm-0a-uPu"/>
                         <outlet property="zeroPcButton" destination="NIj-D2-Uq5" id="WGi-A7-Nqb"/>
+                        <segue destination="Dnf-m2-FPm" kind="show" identifier="goToResult" id="R5y-eB-ZLk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -183,7 +187,7 @@
             <objects>
                 <viewController id="Dnf-m2-FPm" customClass="ResultViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E4v-0r-cyo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aU-5P-VMi" userLabel="Result View">
@@ -213,7 +217,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-gt-7rc">
-                                <rect key="frame" x="107" y="792" width="200" height="60"/>
+                                <rect key="frame" x="107" y="816" width="200" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Dtm-6t-XD3"/>
@@ -254,6 +258,7 @@
                             <constraint firstItem="1aU-5P-VMi" firstAttribute="leading" secondItem="SFV-my-Ds8" secondAttribute="leading" id="xa8-b1-ZO8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tzo-qV-Tms"/>
                     <connections>
                         <outlet property="settingsLabel" destination="y5n-yI-QwU" id="Dk7-DN-wRP"/>
                         <outlet property="totalLabel" destination="cw2-SX-JMK" id="z0G-WY-snC"/>

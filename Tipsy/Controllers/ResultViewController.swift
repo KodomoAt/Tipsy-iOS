@@ -9,16 +9,20 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    var totalPerPerson: String?
+    var sentence: String?
     @IBOutlet weak var settingsLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        totalLabel.text = totalPerPerson
+        settingsLabel.text = sentence
         // Do any additional setup after loading the view.
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
     }
     
     /*
